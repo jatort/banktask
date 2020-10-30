@@ -9,10 +9,10 @@ router.get('/', (req, res) => {
 });
 
  
-cron.schedule('* * * * * *', async () => {
+cron.schedule('* * * * *', async () => {
   console.log('running a task every hour');
   axios
-  .post('http://localhost:3000/tasks')
+  .post('http://54.160.77.82/tasks')
   .catch(error => {
     console.error(error)
   });
